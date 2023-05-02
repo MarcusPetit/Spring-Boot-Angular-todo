@@ -2,8 +2,6 @@ package com.marcus.todo.model;
 
 import java.time.LocalDateTime;
 
-import org.springframework.cglib.core.Local;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
@@ -34,6 +32,7 @@ public class Todo {
   private Boolean done;
 
   @Column
+  @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
   private LocalDateTime doneDate;
 
   @Column
